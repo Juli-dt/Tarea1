@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Inventos que cambiaron el rumbo de la humanidad</h1>
+    </header>
+    <main>
+        <div>
+        <p> ¡Hola! <br> ¿Tienes algo para decirnos? ¿Una recomendación, queja, petición? ¡Haznoslo saber!</p>
+        </div>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required placeholder="Introduce tu nombre">
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico">
+        
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <span><a href="../index.html">Home</a></span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+        
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                alert('Hemos recibido tu aporte');
+                
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
